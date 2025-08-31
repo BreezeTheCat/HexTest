@@ -1,0 +1,8 @@
+{
+  hexdoc: {
+    hextest: {
+      title: "Hextest Book",
+      description: "Hextest addon for Hex Casting",
+    },
+  }
+}

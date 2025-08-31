@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "hextest",
+  "version": "${version}",
+  "name": "Hextest",
+  "description": "Hextest addon for Hex Casting",
+  "authors": [
+    "BreezeTheCat"
+  ],
+  "contact": {
+    "homepage": "https://breezethecat.github.io/hextest",
+    "sources": "https://github.com/BreezeTheCat/hextest"
+  },
+  "license": "MIT",
+  "icon": "assets/hextest/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "io.github.breezethecat.hextest.fabric.FabricHextest"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "io.github.breezethecat.hextest.fabric.FabricHextestClient"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "io.github.breezethecat.hextest.fabric.FabricHextestModMenu"
+    }]
+  },
+  "mixins": [
+    "hextest-common.mixins.json",
+    "hextest-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting_dependency}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}
